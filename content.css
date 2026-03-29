@@ -1,0 +1,42 @@
+/* Applied immediately at document_start to prevent flash of unblurred content */
+html.ytfm-enabled ytd-browse[page-subtype="home"] #contents.ytd-rich-grid-renderer,
+html.ytfm-enabled ytd-browse[page-subtype="home"] ytd-rich-grid-renderer,
+html.ytfm-enabled ytd-browse[page-subtype="home"] #primary {
+  filter: blur(15px);
+  pointer-events: none;
+  user-select: none;
+  transition: filter 0.3s ease;
+}
+
+/* Also blur the chips bar (topic filters) on home */
+html.ytfm-enabled ytd-browse[page-subtype="home"] #header.ytd-rich-grid-renderer,
+html.ytfm-enabled ytd-browse[page-subtype="home"] yt-chip-cloud-renderer {
+  filter: blur(8px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Blur Shorts shelf on home */
+html.ytfm-enabled ytd-browse[page-subtype="home"] ytd-rich-section-renderer {
+  filter: blur(15px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Banner indicating focus mode is on */
+html.ytfm-enabled ytd-browse[page-subtype="home"]::before {
+  content: "Focus Mode activado — usa la barra de busqueda para encontrar lo que necesitas";
+  display: block;
+  text-align: center;
+  padding: 16px;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  font-size: 15px;
+  font-family: 'YouTube Sans', 'Roboto', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  border-bottom: 2px solid #ff4444;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
