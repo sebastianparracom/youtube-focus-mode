@@ -101,6 +101,26 @@
     .status.active {
       color: #ff4444;
     }
+
+    .signature {
+      text-align: center;
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 10px;
+      color: #555;
+      letter-spacing: 0.3px;
+    }
+
+    .signature a {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .signature a:hover {
+      color: #ff4444;
+    }
   </style>
 </head>
 <body>
@@ -118,6 +138,8 @@
   </div>
 
   <p class="status" id="status">Desactivado</p>
+
+  <p class="signature">By Sebastian Parra - <a href="https://infinipus.ai" target="_blank">infinipus.ai</a></p>
 
   <script src="popup.js"></script>
 </body>
